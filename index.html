@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevate IT Training | Professional Corporate Development</title>
+    <style>
+        /* General Reset & Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            margin: 0 0 15px;
+            color: #004080;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        
+        /* Header */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 26px;
+            font-weight: 800;
+            color: #004080;
+        }
+        .logo span {
+            color: #ff9900;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin-left: 25px;
+        }
+        nav ul li a {
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #004080;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 34, 77, 0.75), rgba(0, 34, 77, 0.75)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 120px 20px;
+        }
+        .hero h1 {
+            color: #fff;
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn {
+            background: #ff9900;
+            color: #fff;
+            padding: 15px 35px;
+            font-size: 18px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #e68a00;
+            color: #fff;
+        }
+
+        /* Training Verticals */
+        .training-verticals {
+            padding: 80px 10%;
+            background: #f4f7f6;
+            text-align: center;
+        }
+        .training-verticals h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            flex: 1;
+            min-width: 250px;
+            text-align: left;
+            transition: transform 0.3s ease;
+            border-top: 5px solid #004080;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        .card ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        .card ul li {
+            margin-bottom: 8px;
+            font-size: 15px;
+            color: #555;
+        }
+        .card ul li::before {
+            content: "✓ ";
+            color: #ff9900;
+            font-weight: bold;
+        }
+        .card-link {
+            color: #004080;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* About / Why Choose Us */
+        .about {
+            padding: 80px 10%;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        .about-text h2 {
+            font-size: 36px;
+        }
+        .about-text p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .about-stats {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .stat-box {
+            background: #eef3f8;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            flex: 1;
+        }
+        .stat-box h4 {
+            font-size: 28px;
+            color: #ff9900;
+            margin: 0;
+        }
+        .about-img {
+            flex: 1;
+            min-width: 300px;
+            height: 400px;
+            background: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80') center/cover;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Footer */
+        footer {
+            background: #00224d;
+            color: #ddd;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 14px;
+        }
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive */
+        @media(max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 20px;
+            }
+            nav ul {
+                margin-top: 15px;
+            }
+            nav ul li {
+                margin: 0 10px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">Elevate<span>IT</span> Training</div>
+        <nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="corporate.html">Corporate Training</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Empower Your Workforce with World-Class IT Training</h1>
+        <p>Customized corporate learning solutions designed to enhance technical expertise, drive digital transformation, and boost office productivity across your organization.</p>
+        <a href="#" class="btn">Explore Our Programs</a>
+    </section>
+
+    <!-- Training Groups (Similar to ETG, DTG, OPG) -->
+    <section class="training-verticals">
+        <h2>Our Training Verticals</h2>
+        <p style="color: #666;">Tailored learning groups designed for modern enterprise challenges.</p>
+        <div class="grid">
+            
+            <!-- Group 1 -->
+            <div class="card">
+                <h3>Emerging Technologies</h3>
+                <p>Stay ahead of the curve with cutting-edge tech training shaping the future.</p>
+                <ul>
+                    <li>Artificial Intelligence & ML</li>
+                    <li>Data Science & Analytics</li>
+                    <li>Cloud Computing (AWS/Azure)</li>
+                    <li>Cybersecurity & Forensics</li>
+                </ul>
+                <a href="#" class="card-link">KNOW MORE ➔</a>
+            </div>
+
+            <!-- Group 2 -->
+            <div class="card">
+                <h3>Development Technologies</h3>
+                <p>Deep technical rigor focusing on software, databases, and architectures.</p>
+                <ul>
+                    <li>Java & Full Stack Development</li>
+                    <li>Python Programming</li>
+                    <li>DevOps & Microservices</li>
+                    <li>Software Testing & Automation</li>
+                </ul>
+                <a href="#" class="card-link">KNOW MORE ➔</a>
+            </div>
+
+            <!-- Group 3 -->
+            <div class="card">
+                <h3>Office Productivity</h3>
+                <p>Boost day-to-day productivity and enhance overall workforce efficiency.</p>
+                <ul>
+                    <li>Advanced MS Excel & VBA</li>
+                    <li>Power BI Dashboards</li>
+                    <li>MS Office Suite & 365</li>
+                    <li>Corporate Soft Skills</li>
+                </ul>
+                <a href="#" class="card-link">KNOW MORE ➔</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="about-text">
+            <h2>Transform Knowledge into Success</h2>
+            <p>For over three decades, we have been at the forefront of corporate learning. We invest time in understanding your business objectives and skill gaps to design tailor-made training interventions.</p>
+            <p>Whether you need technology induction programs for fresh IT joiners, or upskilling for senior leadership, our expert-led modules ensure practical relevance and immediate applicability.</p>
+            
+            <div class="about-stats">
+                <div class="stat-box">
+                    <h4>30+</h4>
+                    <p>Years of Legacy</p>
+                </div>
+                <div class="stat-box">
+                    <h4>20K+</h4>
+                    <p>Trained Annually</p>
+                </div>
+                <div class="stat-box">
+                    <h4>300+</h4>
+                    <p>Corporate Clients</p>
+                </div>
+            </div>
+        </div>
+        <div class="about-img"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 ElevateIT Corporate Training Solutions. All Rights Reserved.</p>
+        <p>A Sample Architecture based on Leading IT Corporate Training Providers.</p>
+    </footer>
+
+</body>
+</html>

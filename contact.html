@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Elevate IT</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; color: #333; background: #f4f7f6; }
+        header { background: #fff; padding: 20px 10%; box-shadow: 0 2px 5px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: bold; color: #004080; }
+        .logo span { color: #ff9900; }
+        a { text-decoration: none; color: #004080; font-weight: bold; }
+        
+        .container { padding: 50px 10%; max-width: 600px; margin: auto; }
+        .contact-wrapper { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; border-top: 5px solid #004080; }
+        h1 { color: #004080; margin-top: 0; }
+        p.subtitle { color: #555; margin-bottom: 30px; }
+        
+        /* Custom Form Styles */
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 15px;
+            font-family: inherit;
+            box-sizing: border-box; /* Ensures padding doesn't widen the box */
+            transition: border-color 0.3s;
+        }
+        input:focus, textarea:focus {
+            border-color: #ff9900;
+            outline: none;
+            box-shadow: 0 0 5px rgba(255,153,0,0.2);
+        }
+        button {
+            background: #ff9900;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #e68a00;
+        }
+
+        .direct-contact { margin-top: 30px; font-size: 14px; color: #666; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Elevate<span>IT</span></div>
+        <a href="index.html">⬅ Back to Home</a>
+    </header>
+    
+    <div class="container">
+        <div class="contact-wrapper">
+            <h1>Request a Training Proposal</h1>
+            <p class="subtitle">Fill out the form below and our team will get back to you shortly.</p>
+            
+            <!-- FORMSUBMIT INTEGRATION -->
+            <form action="https://formsubmit.co/connect200978@gmail.com" method="POST">
+                
+                <!-- Hidden configuration fields -->
+                <input type="hidden" name="_subject" value="New Website Inquiry!">
+                <input type="hidden" name="_captcha" value="true">
+                
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" id="mobile" name="mobile" placeholder="Enter your 10-digit mobile number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Training Requirements</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell us about the courses, batch size, or tech stacks you are interested in (e.g., MS Server, Azure, Full Stack)..." required></textarea>
+                </div>
+
+                <button type="submit">Send Inquiry</button>
+            </form>
+
+        </div>
+        
+        <div class="direct-contact">
+            <p><strong>Or reach us directly:</strong></p>
+            <p>Email: connect200978@gmail.com | Location: Mumbai, Maharashtra</p>
+        </div>
+    </div>
+
+</body>
+</html>
